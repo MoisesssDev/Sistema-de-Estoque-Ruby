@@ -13,8 +13,10 @@ describe 'User visit home page' do
 
   it "and see registered warehouses" do
     # Arrange
-    Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000)
-    Warehouse.create(name: 'Maceio', code: 'MCZ', city: 'Maceio', area: 50_000)
+    Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
+                     address: 'Av. Ribeirão 291', cep: '34000-000', description: 'Galpão RJ')
+    Warehouse.create(name: 'Maceio', code: 'MCZ', city: 'Maceio', area: 50_000,
+                     address: 'Av. José Carvalho 3410', cep: '41500-000', description: 'Galpão Maceio')
 
     # Act
     visit(root_path)

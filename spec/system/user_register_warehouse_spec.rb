@@ -42,5 +42,25 @@ describe "User register warehouse " do
     expect(page).to have_content "45000 m2"
 
   end
+
+  it "with incomplete data" do
+    # Arrange
+
+    # Act
+    visit root_path
+    click_on "Cadastrar Galpão"
+    fill_in "Nome",	with: "" 
+    fill_in "Descrição",	with: "" 
+    fill_in "Código",	with: "" 
+    fill_in "Endereço",	with: "" 
+    fill_in "Cidade",	with: "" 
+    fill_in "CEP",	with: "" 
+    fill_in "Área",	with: ""
+    click_on "Salvar"
+
+    # Assert
+    expect(page).to have_content "Galpão não cadastrado"
+  end
+  
   
 end
