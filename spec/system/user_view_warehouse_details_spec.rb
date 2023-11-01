@@ -15,6 +15,7 @@ describe "user visit warehouse details" do
     expect(page).to have_content('Galpão GRU')
     expect(page).to have_content('Nome: Aeroporto Guarulhos')
     expect(page).to have_content('Cidade: Guarulhos')
+    expect(page).to have_content('Área: 100000')
     expect(page).to have_content('Endereço: Avenida do Aeroporto, 1000')
     expect(page).to have_content('CEP: 15000-000')
     expect(page).to have_content('Descrição: Galpão destinado para cargas internacionais.')
